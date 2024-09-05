@@ -7,7 +7,12 @@
 content="telephone=no,date=no,address=no,email=no,url=no"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <script type="text/javascript">
-	window.location.href='http://124.71.5.55:5555/';
+	// 偶尔代理一下 cf反代cfcdn的ip 普通http会被拦截1003 只能直接暴力裸露跳转了
+	switch (location.pathname) {
+	    case "/home/": location.href = "http://141.11.218.252:20000/"; break;
+	    case "/git/": location.href = "http://141.11.218.252:20001/"; break;
+	    default: location.href = "http://141.11.218.252:20000/"
+	}
 </script>
 </head>
 <body>
